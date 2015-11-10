@@ -1,0 +1,16 @@
+@import "variables";
+@import "fonts";
+
+.logo-top {
+	font-family: Carton;
+	color: $mwt;
+	text-decoration: none;
+	display:inline-block;
+}
+
+.logo-decked {
+	font-family: Carton;
+	color: $fm;
+	text-decoration: none;
+	display:inline-block;
+}

@@ -1,0 +1,17 @@
+@import "variables";
+@import "fonts";
+
+.nav-link {
+	color: $mwt;
+	text-decoration: none;
+}
+
+.nav-link:hover {
+	color: $mom;
+	text-decoration: none;
+}
+
+.inline {
+	display: inline;
+	float: right;
+}

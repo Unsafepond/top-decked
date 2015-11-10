@@ -1,0 +1,15 @@
+<div>
+	<h2 class="logo-top">
+		<a href="/" class="logo-top">Top</a>
+	</h2>
+	<h2 class="logo-decked">
+		<a href="/" class="logo-decked">Decked</a>
+	</h2>
+	<h3 align="right" class="inline">
+		<% if @user %>
+			<a href="#" class="navbar-link"><% @user.screen_name %></a>
+		<% else %>
+			<%= link_to "Login!", "#", class: "nav-link" %>
+		<% end %>
+	</h3>
+</div>
