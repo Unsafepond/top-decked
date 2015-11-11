@@ -1,0 +1,30 @@
+@import "variables";
+
+.image-well {
+	background-image: url("/assets/mtg_mana.png");
+	background-position: bottom;
+	width: 1200px;
+	height: 300px;
+  padding: 25px;
+}
+
+.dc-button {
+	color: $dm;
+	font-weight: bold;
+	background-color: $mwt;
+	padding: 10px 20px;
+	display: block;
+	text-decoration: none;
+	border:0px solid;
+	width: 300px;
+	margin:0px auto;
+	margin-top:50px;
+}
+
+.dc-button:hover {
+	background-color: $mom;
+}
+
+.home-text {
+	color: $fm;
+}

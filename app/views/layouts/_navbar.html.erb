@@ -1,13 +1,13 @@
-<div>
+<div class="col-md-12">
 	<h2 class="logo-top">
-		<a href="/" class="logo-top">Top</a>
+		<%= link_to "Top", root_path, class: "logo-top" %>
 	</h2>
 	<h2 class="logo-decked">
-		<a href="/" class="logo-decked">Decked</a>
+		<%= link_to "Decked", root_path, class: "logo-decked" %>
 	</h2>
-	<h3 align="right" class="inline">
+	<h3 class="inline-right">
 		<% if @user %>
-			<a href="#" class="navbar-link"><% @user.screen_name %></a>
+			<%= link_to "#{@user.screen_name}", "#", class: "nav-link" %>
 		<% else %>
 			<%= link_to "Login!", "#", class: "nav-link" %>
 		<% end %>
