@@ -1,15 +1,25 @@
-<div class="col-md-12">
+<div id="navbar" class="col-md-12">
 	<h2 class="logo-top">
 		<%= link_to "Top", root_path, class: "logo-top" %>
 	</h2>
 	<h2 class="logo-decked">
 		<%= link_to "Decked", root_path, class: "logo-decked" %>
 	</h2>
-	<h3 class="inline-right">
+	<div class="inline-right">
 		<% if @user %>
-			<%= link_to "#{@user.screen_name}", "#", class: "nav-link" %>
+			<div class="user-info">
+				<h4 class="inline-top-right">
+					<img src="<%= @user.image_url%>" align="top" height="40" width="40">
+					<%= link_to "#{@user.username}", "#", class: "nav-link" %>
+					<p class="nav-link-sm">
+						<%= link_to "Logout", logout_path, class: "nav-link" %>
+					</p>
+				</h4>
+			</div>
 		<% else %>
-			<%= link_to "Login!", "#", class: "nav-link" %>
+			<h4>
+				<%= link_to "Login!", login_path, class: "nav-link" %>
+			</h4>
 		<% end %>
-	</h3>
+	</div>
 </div>

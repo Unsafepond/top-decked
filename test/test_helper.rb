@@ -3,8 +3,10 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'minitest/reporters'
 require 'simplecov'
+require 'capybara/rails'
 
 class ActiveSupport::TestCase
+	include Capybara::DSL
 	SimpleCov.start('rails')
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all

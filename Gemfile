@@ -18,6 +18,7 @@ group :development, :test do
   gem 'byebug'
   gem 'simplecov'
   gem 'minitest-reporters'
+  gem 'capybara'
 end
 
 group :development do
