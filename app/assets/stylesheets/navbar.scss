@@ -1,0 +1,45 @@
+@import "variables";
+@import "fonts";
+
+.nav-link {
+	margin-right: 20px;
+	color: $mwt;
+	text-decoration: none;
+}
+
+.nav-link:hover {
+	color: $mom;
+	text-decoration: none;
+}
+
+.nav-link-sm {
+	color: $mwt;
+	text-decoration: none;
+	font-size: 80%;
+	text-align: center;
+	position: relative;
+	bottom: 27px;
+}
+
+.nav-link-sm:hover {
+	color: $mom;
+	text-decoration: none;
+	text-align: center;
+}
+
+.inline-right {
+	display: inline;
+	float: right;
+}
+
+.inline-top-right {
+	display:inline-block;
+	float: right;
+	clear: right;
+}
+
+.user-info {
+	position: fixed;
+  top: 1px;
+  right: 1px;
+}

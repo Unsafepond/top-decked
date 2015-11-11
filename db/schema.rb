@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 20151110164604) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "users_tables", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "uid"
-    t.string   "screen_name"
+    t.string   "username"
     t.string   "image_url"
     t.string   "oauth_token"
     t.string   "oauth_token_secret"
