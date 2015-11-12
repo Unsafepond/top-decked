@@ -8829,20 +8829,52 @@ body {
 }
 /* line 4, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/navbar.scss */
 .nav-link {
+  margin-right: 20px;
   color: #89DBBF;
   text-decoration: none;
 }
 
-/* line 9, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/navbar.scss */
+/* line 10, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/navbar.scss */
 .nav-link:hover {
   color: #4F9593;
   text-decoration: none;
 }
 
-/* line 14, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/navbar.scss */
+/* line 15, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/navbar.scss */
+.nav-link-sm {
+  color: #89DBBF;
+  text-decoration: none;
+  font-size: 80%;
+  text-align: center;
+  position: relative;
+  bottom: 27px;
+}
+
+/* line 24, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/navbar.scss */
+.nav-link-sm:hover {
+  color: #4F9593;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* line 30, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/navbar.scss */
 .inline-right {
   display: inline;
   float: right;
+}
+
+/* line 35, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/navbar.scss */
+.inline-top-right {
+  display: inline-block;
+  float: right;
+  clear: right;
+}
+
+/* line 41, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/navbar.scss */
+.user-info {
+  position: fixed;
+  top: 1px;
+  right: 1px;
 }
 
 /* for all sass variables */
@@ -8863,12 +8895,15 @@ body {
   width: 1200px;
   height: 300px;
   padding: 25px;
+  margin: 5px;
+  margin-right: 5px;
 }
 
-/* line 11, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/home.scss */
+/* line 13, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/home.scss */
 .dc-button {
   color: #121D1C;
   font-weight: bold;
+  font-size: 140%;
   background-color: #89DBBF;
   padding: 10px 20px;
   display: block;
@@ -8879,12 +8914,12 @@ body {
   margin-top: 50px;
 }
 
-/* line 24, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/home.scss */
+/* line 27, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/home.scss */
 .dc-button:hover {
   background-color: #4F9593;
 }
 
-/* line 28, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/home.scss */
+/* line 31, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/home.scss */
 .home-text {
   color: #DBDBD3;
 }
@@ -8899,6 +8934,38 @@ body {
   background: #121D1C;
 }
 
+@font-face {
+  font-family: Ribbon;
+  src: url("/assets/Ribbon_V2_2011.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: Carton;
+  src: url("/assets/Carton-Slab.otf");
+  font-weight: bold;
+}
+/* line 4, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/decks.scss */
+.name {
+  color: #DBDBD3;
+  display: inline;
+}
+
+/* line 9, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/decks.scss */
+.mana {
+  color: #89DBBF;
+  display: inline;
+}
+/* for all sass variables */
+/* darkside of the moon(dark gray-blue)*/
+/* part-time dreamcatch(dark teal/blue)*/
+/* mermaid of the moon(teal)*/
+/* mermaids wont tell(bright teal)*/
+/* footsteps of a monk(bright gray)*/
+/* line 18, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/utilities/_variables.scss */
+body {
+  background: #121D1C;
+}
+
 /* line 3, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/home.scss */
 .image-well {
   background-image: url("/assets/mtg_mana.png");
@@ -8906,12 +8973,15 @@ body {
   width: 1200px;
   height: 300px;
   padding: 25px;
+  margin: 5px;
+  margin-right: 5px;
 }
 
-/* line 11, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/home.scss */
+/* line 13, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/home.scss */
 .dc-button {
   color: #121D1C;
   font-weight: bold;
+  font-size: 140%;
   background-color: #89DBBF;
   padding: 10px 20px;
   display: block;
@@ -8922,12 +8992,12 @@ body {
   margin-top: 50px;
 }
 
-/* line 24, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/home.scss */
+/* line 27, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/home.scss */
 .dc-button:hover {
   background-color: #4F9593;
 }
 
-/* line 28, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/home.scss */
+/* line 31, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/home.scss */
 .home-text {
   color: #DBDBD3;
 }
@@ -8990,20 +9060,52 @@ body {
 }
 /* line 4, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/navbar.scss */
 .nav-link {
+  margin-right: 20px;
   color: #89DBBF;
   text-decoration: none;
 }
 
-/* line 9, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/navbar.scss */
+/* line 10, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/navbar.scss */
 .nav-link:hover {
   color: #4F9593;
   text-decoration: none;
 }
 
-/* line 14, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/navbar.scss */
+/* line 15, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/navbar.scss */
+.nav-link-sm {
+  color: #89DBBF;
+  text-decoration: none;
+  font-size: 80%;
+  text-align: center;
+  position: relative;
+  bottom: 27px;
+}
+
+/* line 24, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/navbar.scss */
+.nav-link-sm:hover {
+  color: #4F9593;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* line 30, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/navbar.scss */
 .inline-right {
   display: inline;
   float: right;
+}
+
+/* line 35, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/navbar.scss */
+.inline-top-right {
+  display: inline-block;
+  float: right;
+  clear: right;
+}
+
+/* line 41, /Users/UnsafePond/Documents/Turing/3module/projects/top-decked/app/assets/stylesheets/navbar.scss */
+.user-info {
+  position: fixed;
+  top: 1px;
+  right: 1px;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
