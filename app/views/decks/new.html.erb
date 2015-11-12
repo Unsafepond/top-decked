@@ -1,1 +1,12 @@
 <%= render partial: "layouts/navbar" %>
+
+<% @cards.sample(50).each do |card| %>
+	<div>
+	 <h4 class="name">
+	 	<%= card.name %>
+	 </h4>
+	 <h4 class="mana">
+	 	<%= card.mana_cost %>
+	 </h4>
+	</div>
+<% end %>
