@@ -219,6 +219,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.1.0)
   figaro
+  http
   jbuilder (~> 2.0)
   jquery-rails
   minitest-reporters

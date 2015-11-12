@@ -7,6 +7,20 @@ class WelcomeControllerTest < ActionController::TestCase
     assert_equal 200, response.status
   end
 
+  test "logo links to home page" do
+    visit "/deck-creator"
+
+    click_on "Top"
+
+    assert_equal root_path, current_path
+
+    visit "/deck-creator"
+
+    click_on "Decked"
+
+    assert_equal root_path, current_path
+  end
+
   test "Log in with twitter" do
     skip
   	visit root_path
