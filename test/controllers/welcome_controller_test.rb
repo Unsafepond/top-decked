@@ -15,7 +15,15 @@ class WelcomeControllerTest < ActionController::TestCase
   		click_on "Login!"
   	end
 
-  	assert_equal current_path, root_path
+  	assert_equal root_path, current_path
   	assert page.has_content? "UnsafePond"
+  end
+
+  test "#create a deck button" do
+    visit root_path
+
+    click_on "Create A Deck!"
+
+    assert_equal "/deck-creator", current_path
   end
 end
