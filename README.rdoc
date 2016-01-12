@@ -1,28 +1,9 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TopDecked is a Magic the Gathering deck builder web app.
 
-Things you may want to cover:
+I've found most magic deck building tools to be clunky and generally just not fun to look at.
 
-* Ruby version
+So, I'm going to try to improve on some base ideas I've found throughout all the other tools I've seen.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+(つ▀¯▀)つ
