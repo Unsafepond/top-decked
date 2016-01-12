@@ -8,7 +8,8 @@ class Card < ActiveRecord::Base
 			rarity: card["rarity"],
 			card_type: card["type"],
 			set: card["set"],
-			image_url: card["images"]["gatherer"]
+			image_url: card["images"]["gatherer"],
+			card_text: card["text"]
 			)
 	end
 
