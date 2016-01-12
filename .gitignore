@@ -17,3 +17,7 @@
 
 # Ignore simplecov
 /coverage
+
+#Ignore byebug
+
+.byebug_history

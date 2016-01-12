@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: top-decked_production
-  username: top-decked
-  password: <%= ENV['TOP-DECKED_DATABASE_PASSWORD'] %>

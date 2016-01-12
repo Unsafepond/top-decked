@@ -11,7 +11,7 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 
-  Minitest::Reporters.use! [Minitest::Reporters::SpecReporter.new, Minitest::Reporters::ProgressReporter.new]
+  Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
   # Add more helper methods to be used by all tests here...
 end
