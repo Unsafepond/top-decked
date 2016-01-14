@@ -1,0 +1,11 @@
+<%= render partial: "layouts/navbar" %>
+<div class="container">
+  <h3 class="username">
+    <span>
+      <%= image_tag @user.image_url %>
+    </span>
+    <%= @user.username %>
+  </h3>
+  <br>
+  <h4 class="deck-title"> Created decks: </h4>
+</div>

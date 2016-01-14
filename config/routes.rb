@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get '/logout', to: "sessions#destroy", as: :logout
 
   get "/deck-creator", to: "decks#new"
+
+  resources :user, except: [:new, :create, :destroy]
 end
