@@ -7,5 +7,5 @@ Rails.application.routes.draw do
 
   get "/deck-creator", to: "decks#new"
 
-  resources :user, except: [:new, :create, :destroy]
+  resources :users, except: [:new, :create, :destroy]
 end
