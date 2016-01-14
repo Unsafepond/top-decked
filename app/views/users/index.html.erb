@@ -1,1 +1,13 @@
 <%= render partial: "layouts/navbar" %>
+
+<div class="container">
+  <h2 class="deck-title">
+  Users:
+  </h2>
+  <% @users.each do |user| %>
+    <div class="chip chip-name">
+      <%= link_to image_tag(user.image_url), user_path(user.id) %>
+      <%= link_to user.username, user_path(user.id) %>
+    </div>
+  <% end %>
+</div>
