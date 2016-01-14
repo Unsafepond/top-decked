@@ -1,14 +1,13 @@
 @import "variables";
 
-.image-well {
-	background-image: url("/assets/mtg_mana.png");
-	background-position: bottom;
-	width: 1200px;
-	height: 300px;
-  padding: 25px;
-  margin: 5px;
-  margin-right: 5px;
-}
+.parallax-container {
+    height: 500px;
+  }
+
+
+.parallax:img {
+    transform: none;
+  }
 
 .dc-button {
 	color: $dm;

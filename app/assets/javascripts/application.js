@@ -15,3 +15,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require_self
+
+
+
+
+
+
+
+
+$(document).ready(function(){
+  $('.parallax').parallax();
+});

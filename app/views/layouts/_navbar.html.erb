@@ -1,20 +1,20 @@
 <div id="navbar" class="col-md-12">
 	<h2 class="logo-top">
-		<%= link_to "Top", root_path, class: "logo-top" %>
+		<%= link_to "Top", root_path, method: :get, class: "logo-top" %>
 	</h2>
 	<h2 class="logo-decked">
-		<%= link_to "Decked", root_path, class: "logo-decked" %>
+		<%= link_to "Decked", root_path, method: :get, class: "logo-decked" %>
 	</h2>
 	<div class="inline-right">
 		<% if @user %>
 			<div class="user-info">
-				<h4 class="inline-top-right">
+				<h5 class="inline-top-right">
 					<img src="<%= @user.image_url%>" align="top" height="40" width="40">
 					<%= link_to "#{@user.username}", "#", class: "nav-link" %>
 					<p class="nav-link-sm">
 						<%= link_to "Logout", logout_path, class: "nav-link" %>
 					</p>
-				</h4>
+				</h5>
 			</div>
 		<% else %>
 			<h4>
