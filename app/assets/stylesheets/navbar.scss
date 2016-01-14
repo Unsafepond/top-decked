@@ -5,6 +5,7 @@
 	margin-right: 20px;
 	color: $mwt;
 	text-decoration: none;
+	display:inline-block;
 }
 
 .nav-link:hover {
@@ -25,6 +26,18 @@
 	color: $mom;
 	text-decoration: none;
 	text-align: center;
+}
+
+.nav-link-lg {
+	margin-left: 20px;
+	color: $mwt !important;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.nav-link-lg:hover {
+	color: $mom !important;
+	text-decoration: none;
 }
 
 .inline-right {

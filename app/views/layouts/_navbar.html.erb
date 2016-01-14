@@ -1,16 +1,19 @@
 <div id="navbar" class="col-md-12">
-	<h2 class="logo-top">
+	<h2 class="logo-top hide-on-small-and-down">
 		<%= link_to "Top", root_path, method: :get, class: "logo-top" %>
 	</h2>
-	<h2 class="logo-decked">
+	<h2 class="logo-decked hide-on-small-and-down">
 		<%= link_to "Decked", root_path, method: :get, class: "logo-decked" %>
 	</h2>
+	<h4 class="nav-link-lg">
+	 <%= link_to "Users", users_path %>
+	</h4>
 	<div class="inline-right">
-		<% if @user %>
+		<% if current_user %>
 			<div class="user-info">
 				<h5 class="inline-top-right">
-					<img src="<%= @user.image_url%>" align="top" height="40" width="40">
-					<%= link_to "#{@user.username}", user_path(@user.id), class: "nav-link" %>
+					<img src="<%= current_user.image_url%>" align="top" height="40" width="40">
+					<%= link_to "#{current_user.username}", user_path(current_user.id), class: "nav-link" %>
 					<p class="nav-link-sm">
 						<%= link_to "Logout", logout_path, class: "nav-link" %>
 					</p>
