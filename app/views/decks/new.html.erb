@@ -1,36 +1,8 @@
 <%= render partial: "layouts/navbar" %>
-
-<table class="highlight">
-  <thead>
-    <th>
-      Name
-    </th>
-    <th>
-      Cost
-    </th>
-    <th>
-      Type
-    </th>
-    <th>
-      Set
-    </th>
-  </thead>
-  <tbody>
-    <% @cards.sample(50).each do |card| %>
-      <tr>
-        <td class="name">
-          <%= card.name %>
-        </td>
-        <td class="mana">
-          <%= card.mana_cost %>
-        </td>
-        <td class="type">
-          <%= card.card_type %>
-        </td>
-        <td class="set">
-          <%= card.set %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="container">
+  <%= form_for @deck do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit "Continue" %>
+  <% end %>
+</div>

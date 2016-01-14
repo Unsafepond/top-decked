@@ -14,6 +14,7 @@
 //= require materialize-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require deck_creation
 //= require_tree .
 //= require_self
 

@@ -1,0 +1,81 @@
+<%= render partial: "layouts/navbar" %>
+<div class="container">
+  <table class="highlight responsive-table">
+    <thead>
+      <th class="name">
+        Name
+      </th>
+      <th class="mana">
+        Cost
+      </th>
+      <th class="type">
+        Type
+      </th>
+      <th class="set">
+        Set
+      </th>
+    </thead>
+    <tbody>
+      <% @cards.sample(50).each do |card| %>
+        <tr class="card" id="<%= card.id %>">
+          <td class="name">
+            <%= card.name %>
+          </td>
+          <td class="mana">
+            <%= card.mana_cost %>
+          </td>
+          <td class="type">
+            <%= card.card_type %>
+          </td>
+          <td class="set">
+            <%= card.set %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= form_tag deck_path(@deck.id), method: :patch, class: "card-id" %>
+  <%= hidden_field_tag "card-id" %>
+  <%= submit_tag "Add to Deck" %>
+</div>
+
+
+<div class="container">
+  <table class="highlight responsive-table">
+    <thead>
+      <th>
+        Name
+      </th>
+      <th>
+        Cost
+      </th>
+      <th>
+        Type
+      </th>
+      <th>
+        Set
+      </th>
+    </thead>
+    <tbody>
+      <tr></tr>
+      <% @deck.cards.each do |card| %>
+        <tr class="card">
+          <td class="name">
+            <%= card.name %>
+          </td>
+          <td class="mana">
+            <%= card.mana_cost %>
+          </td>
+          <td class="type">
+            <%= card.card_type %>
+          </td>
+          <td class="set">
+            <%= card.set %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<script src="/assets/deck_creation.js"></script>
