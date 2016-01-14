@@ -1,15 +1,38 @@
 <%= render partial: "layouts/navbar" %>
 
-<% @cards.sample(50).each do |card| %>
-	<div>
-	 <h4 class="name">
-	 	<%= card.name %>
-	 </h4>
-	 <h4 class="mana">
-	 	<%= card.mana_cost %>
-	 </h4>
-   <h4 class="text">
-    <%= card.card_text %>
-   </h4>
-	</div>
-<% end %>
+
+
+<table class="highlight">
+  <thead>
+    <th>
+      Name
+    </th>
+    <th>
+      Cost
+    </th>
+    <th>
+      Type
+    </th>
+    <th>
+      Set
+    </th>
+  </thead>
+  <tbody>
+    <% @cards.sample(50).each do |card| %>
+      <tr>
+        <td class="name">
+          <%= card.name %>
+        </td>
+        <td class="mana">
+          <%= card.mana_cost %>
+        </td>
+        <td class="type">
+          <%= card.card_type %>
+        </td>
+        <td class="set">
+          <%= card.set %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
