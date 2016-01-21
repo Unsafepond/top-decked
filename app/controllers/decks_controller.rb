@@ -27,12 +27,18 @@ class DecksController < ApplicationController
   def edit
     @cards = Card.all
     @deck = current_user.decks.find(params[:id])
-    @deck_cards = DeckHasher.new(@deck.cards).cards
+    deck_hasher = DeckHasher.new(@deck.cards)
+    @deck_cards = deck_hasher.cards
+    @card_count = deck_hasher.count
   end
 
   def update
     @deck = current_user.decks.find(params[:id])
-    @deck.cards << Card.find(params["card-id"].to_i)
+    if params["commit"] == "Add to Deck"
+      @deck.cards << Card.find(params["card-id"].to_i)
+    else
+      @deck.deck_cards.where(card_id: params["card-id"].to_i).first.delete
+    end
     redirect_to :back
   end
 

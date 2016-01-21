@@ -1,5 +1,6 @@
 <%= render partial: "layouts/navbar" %>
 <div class="cards col s6">
+  <h5 class="title">All Cards</h5>
   <table cellspacing="0" cellpadding="0" border="0" width="350">
    <tr>
     <td>
@@ -53,6 +54,7 @@
 </div>
 
 <div class="deck col s6 offset-s6">
+  <h5 class="title">Deck</h5>
   <table cellspacing="0" cellpadding="0" border="0" width="350">
    <tr>
     <td>
@@ -103,6 +105,8 @@
     </td>
    </tr>
   </table>
+  <%= submit_tag "Remove From Deck" %>
+  <p class="count">Cards: <%= @card_count %></p>
 </div>
 
 <div class="filters">
