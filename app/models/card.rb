@@ -1,4 +1,7 @@
 class Card < ActiveRecord::Base
+	has_many :deck_cards
+	has_many :decks, through: :deck_cards
+	validates :name, uniqueness: true
 
 	def self.save_from_mtg_api(card)
 		Card.create(

@@ -8,4 +8,35 @@
   </h3>
   <br>
   <h4 class="deck-title"> Created decks: </h4>
+    <table class="highlight">
+      <thead>
+        <th> 
+          Name
+        </th>
+        <th>
+          Colors
+        </th>
+        <th>
+          Card Count
+        </th>
+      </thead>
+      <tbody>
+        <% @user.decks.each do |deck| %>
+          <tr data-link="<%= edit_deck_path(deck.id) %>">
+            <td>
+              <%= deck.name %>
+            </td>
+            <td>
+              N/A
+            </td>
+            <td>
+              <%= deck.cards.count %>
+            </td>
+            <td>
+              <%= button_to "Delete", deck_path(deck.id), method: :delete %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 </div>

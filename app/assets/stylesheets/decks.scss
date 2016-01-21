@@ -2,11 +2,21 @@
 @import "fonts";
 
 .name {
-	color: $fm;
-	display: inline;
+	color: $ptd;
 }
 
 .mana {
 	color: $mwt;
-	display: inline;
+}
+
+.type {
+  color: $ptd;
+}
+
+.set {
+  color: $mwt;
+}
+
+.selected {
+  color: green;
 }
