@@ -27,7 +27,9 @@ class DecksController < ApplicationController
   def edit
     @cards = Card.all
     @deck = current_user.decks.find(params[:id])
-    @deck_cards = DeckHasher.new(@deck.cards).cards
+    deck_hasher = DeckHasher.new(@deck.cards)
+    @deck_cards = deck_hasher.cards
+    @card_count = deck_hasher.count
   end
 
   def update
