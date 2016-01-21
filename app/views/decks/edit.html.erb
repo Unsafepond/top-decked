@@ -79,10 +79,14 @@
     <td>
        <div style="width:370px; height:300px; overflow:auto;">
          <table cellspacing="0" cellpadding="1" border="1" width="350" >
-           <% @deck.cards.each do |card| %>
+           <% @deck_cards.each do |card, quantity| %>
             <tr class="card" id="<%= card.id %>">
               <td class="name">
-                <%= card.name %>
+                <% if quantity > 1%>
+                  <%= card.name %>
+                <% else %>
+                  <%= "#{card.name}(#{quantity})"%> 
+                <% end %>
               </td>
               <td class="mana">
                 <%= card.mana_cost %>
