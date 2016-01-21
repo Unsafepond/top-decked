@@ -1,8 +1,8 @@
 <%= render partial: "layouts/navbar" %>
 <div class="container">
+  <h2 class="logo-decked"> Name Your Deck: </h2>
   <%= form_for @deck do |f| %>
-  <%= f.label :name %>
   <%= f.text_field :name %>
-  <%= f.submit "Continue" %>
+  <%= f.submit "Continue", class: "dc-button" %>
   <% end %>
 </div>

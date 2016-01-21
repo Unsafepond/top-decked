@@ -2,7 +2,7 @@
 @import "fonts";
 
 .name {
-	color: $fm;
+	color: $ptd;
 }
 
 .mana {
@@ -10,9 +10,13 @@
 }
 
 .type {
-  color: $fm;
+  color: $ptd;
 }
 
 .set {
   color: $mwt;
+}
+
+.selected {
+  color: green;
 }

@@ -1,81 +1,106 @@
 <%= render partial: "layouts/navbar" %>
 <div class="container">
-  <table class="highlight responsive-table">
-    <thead>
-      <th class="name">
-        Name
-      </th>
-      <th class="mana">
-        Cost
-      </th>
-      <th class="type">
-        Type
-      </th>
-      <th class="set">
-        Set
-      </th>
-    </thead>
-    <tbody>
-      <% @cards.sample(50).each do |card| %>
-        <tr class="card" id="<%= card.id %>">
-          <td class="name">
-            <%= card.name %>
-          </td>
-          <td class="mana">
-            <%= card.mana_cost %>
-          </td>
-          <td class="type">
-            <%= card.card_type %>
-          </td>
-          <td class="set">
-            <%= card.set %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <%= form_tag deck_path(@deck.id), method: :patch, class: "card-id" %>
-  <%= hidden_field_tag "card-id" %>
-  <%= submit_tag "Add to Deck" %>
-</div>
+  <div class="col s6">
+    <table cellspacing="0" cellpadding="0" border="0" width="350">
+     <tr>
+      <td>
+       <table cellspacing="0" cellpadding="1" border="1" width="350">
+         <tr style="color:white;background-color:grey">
+          <th class="name">
+            Name
+          </th>
+          <th class="mana">
+            Cost
+          </th>
+          <th class="type">
+            Type
+          </th>
+          <th class="set">
+            Set
+          </th>
+         </tr>
+       </table>
+      </td>
+     </tr>
+    <tr>
+    <td>
+       <div style="width:370px; height:300px; overflow:auto;">
+         <table cellspacing="0" cellpadding="1" border="1" width="350">
+           <% @cards.first(50).each do |card| %>
+            <tr class="card" id="<%= card.id %>">
+              <td class="name">
+                <%= card.name %>
+              </td>
+              <td class="mana">
+                <%= card.mana_cost %>
+              </td>
+              <td class="type">
+                <%= card.card_type %>
+              </td>
+              <td class="set">
+                <%= card.set %>
+              </td>
+            </tr>
+          <% end %>
+         </table>  
+       </div>
+      </td>
+     </tr>
+    </table>
+    
+    <%= form_tag deck_path(@deck.id), method: :patch, class: "card-id" %>
+    <%= hidden_field_tag "card-id" %>
+    <%= submit_tag "Add to Deck" %>
+  </div>
 
-
-<div class="container">
-  <table class="highlight responsive-table">
-    <thead>
-      <th>
-        Name
-      </th>
-      <th>
-        Cost
-      </th>
-      <th>
-        Type
-      </th>
-      <th>
-        Set
-      </th>
-    </thead>
-    <tbody>
-      <tr></tr>
-      <% @deck.cards.each do |card| %>
-        <tr class="card">
-          <td class="name">
-            <%= card.name %>
-          </td>
-          <td class="mana">
-            <%= card.mana_cost %>
-          </td>
-          <td class="type">
-            <%= card.card_type %>
-          </td>
-          <td class="set">
-            <%= card.set %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+  <div class="col s6 offset-s6">
+    <table cellspacing="0" cellpadding="0" border="0" width="350">
+     <tr>
+      <td>
+       <table cellspacing="0" cellpadding="1" border="1" width="350" >
+         <tr style="color:white;background-color:grey">
+          <th class="name">
+            Name
+          </th>
+          <th class="mana">
+            Cost
+          </th>
+          <th class="type">
+            Type
+          </th>
+          <th class="set">
+            Set
+          </th>
+         </tr>
+       </table>
+      </td>
+     </tr>
+    <tr>
+    <td>
+       <div style="width:370px; height:300px; overflow:auto;">
+         <table cellspacing="0" cellpadding="1" border="1" width="350" >
+           <% @deck.cards.each do |card| %>
+            <tr class="card" id="<%= card.id %>">
+              <td class="name">
+                <%= card.name %>
+              </td>
+              <td class="mana">
+                <%= card.mana_cost %>
+              </td>
+              <td class="type">
+                <%= card.card_type %>
+              </td>
+              <td class="set">
+                <%= card.set %>
+              </td>
+            </tr>
+          <% end %>
+         </table>  
+       </div>
+      </td>
+     </tr>
+    </table>
+  </div>
 </div>
 
 <script src="/assets/deck_creation.js"></script>

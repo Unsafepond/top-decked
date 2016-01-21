@@ -17,14 +17,13 @@ class DecksController < ApplicationController
 
   def update
     @deck = current_user.decks.find(params[:id])
-    byebug
-    @deck.cards << Card.find(params["deck-id"].to_i)
-    render edit_deck_path(id: deck.id)
+    @deck.cards << Card.find(params["card-id"].to_i)
+    redirect_to :back
   end
 
   def destroy
     if deck = current_user.decks.find(params[:id])
-      deck.delete
+      deck.destroy
       redirect_to :back
     else
       redirect_to root_path

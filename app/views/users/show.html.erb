@@ -22,7 +22,7 @@
       </thead>
       <tbody>
         <% @user.decks.each do |deck| %>
-          <tr>
+          <tr data-link="<%= edit_deck_path(deck.id) %>">
             <td>
               <%= deck.name %>
             </td>
@@ -30,7 +30,7 @@
               N/A
             </td>
             <td>
-              N/A
+              <%= deck.cards.count %>
             </td>
             <td>
               <%= button_to "Delete", deck_path(deck.id), method: :delete %>
