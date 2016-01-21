@@ -11,7 +11,7 @@ $(document).ready(function(){
         if ($(this).text().includes("{U}"))
         {
             $(this).parent().hide();
-        }
+        };
     });
   });
 
@@ -22,7 +22,7 @@ $(document).ready(function(){
         if ($(this).text().includes("{G}"))
         {
             $(this).parent().hide();
-        }
+        };
     });
   });
 
@@ -33,7 +33,7 @@ $(document).ready(function(){
         if ($(this).text().includes("{R}"))
         {
             $(this).parent().hide();
-        }
+        };
     });
   });
 
@@ -44,7 +44,7 @@ $(document).ready(function(){
         if ($(this).text().includes("{W}"))
         {
             $(this).parent().hide();
-        }
+        };
     });
   });
 
@@ -55,7 +55,7 @@ $(document).ready(function(){
         if ($(this).text().includes("{B}"))
         {
             $(this).parent().hide();
-        }
+        };
     });
   });
 });

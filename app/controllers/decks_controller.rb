@@ -32,7 +32,11 @@ class DecksController < ApplicationController
 
   def update
     @deck = current_user.decks.find(params[:id])
-    @deck.cards << Card.find(params["card-id"].to_i)
+    if params["commit"] == "Add to Deck"
+      @deck.cards << Card.find(params["card-id"].to_i)
+    else
+      @deck.deck_cards.where(card_id: params["card-id"].to_i).first.delete
+    end
     redirect_to :back
   end
 
