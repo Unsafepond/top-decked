@@ -13267,6 +13267,24 @@ body {
   left: 30px;
 }
 
+/* line 30, /Users/UnsafePond/Documents/Turing/repeat_module_3/projects/top-decked/app/assets/stylesheets/decks.scss */
+.count {
+  display: inline-block;
+  padding-left: 100px;
+  color: #DBDBD3;
+}
+
+/* line 36, /Users/UnsafePond/Documents/Turing/repeat_module_3/projects/top-decked/app/assets/stylesheets/decks.scss */
+.title {
+  font-family: Carton;
+  color: #DBDBD3;
+}
+
+/* line 41, /Users/UnsafePond/Documents/Turing/repeat_module_3/projects/top-decked/app/assets/stylesheets/decks.scss */
+.hidden {
+  display: none;
+}
+
 /* line 1, /Users/UnsafePond/Documents/Turing/repeat_module_3/projects/top-decked/app/assets/stylesheets/users.scss */
 .username {
   font-family: Carton;

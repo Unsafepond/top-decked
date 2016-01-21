@@ -1,8 +1,8 @@
 $(document).ready(function(){  
-  $('body').delegate(".card", 'click', function(){
+  $(".card").click(function(){
     var cardID = this.id;
     $('#card-id').val(cardID);
-  })
+  });
 
   $("#uButton").click( function(){ 
     $(this).toggleClass("disabled");
@@ -55,7 +55,7 @@ $(document).ready(function(){
         if ($(this).text().includes("{B}"))
         {
             $(this).parent().hide();
-        };
+        }
     });
   });
 });

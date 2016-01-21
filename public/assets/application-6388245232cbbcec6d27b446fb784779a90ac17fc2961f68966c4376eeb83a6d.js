@@ -18495,10 +18495,10 @@ Picker.extend( 'pickadate', DatePicker )
 
 }).call(this);
 $(document).ready(function(){  
-  $('body').delegate(".card", 'click', function(){
+  $(".card").click(function(){
     var cardID = this.id;
     $('#card-id').val(cardID);
-  })
+  });
 
   $("#uButton").click( function(){ 
     $(this).toggleClass("disabled");
@@ -18507,7 +18507,7 @@ $(document).ready(function(){
         if ($(this).text().includes("{U}"))
         {
             $(this).parent().hide();
-        }
+        };
     });
   });
 
@@ -18518,7 +18518,7 @@ $(document).ready(function(){
         if ($(this).text().includes("{G}"))
         {
             $(this).parent().hide();
-        }
+        };
     });
   });
 
@@ -18529,7 +18529,7 @@ $(document).ready(function(){
         if ($(this).text().includes("{R}"))
         {
             $(this).parent().hide();
-        }
+        };
     });
   });
 
@@ -18540,7 +18540,7 @@ $(document).ready(function(){
         if ($(this).text().includes("{W}"))
         {
             $(this).parent().hide();
-        }
+        };
     });
   });
 

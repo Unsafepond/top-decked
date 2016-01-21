@@ -1,5 +1,6 @@
 <%= render partial: "layouts/navbar" %>
-<div class="cards col s6">
+<div class="cards col s4">
+  <% cache do %>
   <h5 class="title">All Cards</h5>
   <table cellspacing="0" cellpadding="0" border="0" width="350">
    <tr>
@@ -26,9 +27,9 @@
   <td>
      <div style="width:370px; height:300px; overflow:auto;">
        <table cellspacing="0" cellpadding="1" border="1" width="350">
-         <% @cards.first(50).each do |card| %>
+         <% @cards.each do |card| %>
           <tr class="card" id="<%= card.id %>">
-            <td class="name ptd">
+            <td class="name ptd" id="<%= card.image_url %>">
               <%= card.name %>
             </td>
             <td class="mana mwt">
@@ -51,9 +52,13 @@
   <%= form_tag deck_path(@deck.id), method: :patch, class: "card-id" %>
   <%= hidden_field_tag "card-id" %>
   <%= submit_tag "Add to Deck" %>
+  <% end %>
 </div>
 
-<div class="deck col s6 offset-s6">
+<div class="col s4 offset-s4" id="cardImage" style="background-color:white;">
+</div>
+
+<div class="deck col s4 offset-s8">
   <h5 class="title">Deck</h5>
   <table cellspacing="0" cellpadding="0" border="0" width="350">
    <tr>
@@ -110,22 +115,22 @@
 </div>
 
 <div class="filters">
-  <h4> Filters: </h4>
+  <h4 class="title"> Filters: </h4>
   <div class="color-filters">
       <a class="btn-floating btn-large waves-effect waves-light" id="wButton">
-        <p>W</p>
+        <img src="/assets/wMana.png" width="55" height="55"></img>
       </a>
       <a class="btn-floating btn-large waves-effect waves-light" id="gButton">
-        <p>G</p>
+        <img src="/assets/gMana.png" width="55" height="55"></img>
       </a>
       <a class="btn-floating btn-large waves-effect waves-light" id="rButton">
-        <p>R</p>
+        <img src="/assets/rMana.png" width="55" height="55"></img>
       </a>
       <a class="btn-floating btn-large waves-effect waves-light" id="bButton">
-        <p>B</p>
+        <img src="/assets/bMana.png" width="55" height="55"></img>
       </a>
       <a class="btn-floating btn-large waves-effect waves-light" id="uButton">
-        <p>U</p>
+        <img src="/assets/uMana.png" width="55" height="55"></img>
       </a>
   </div>
 </div>
