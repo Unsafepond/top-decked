@@ -1,22 +1,28 @@
 @import "variables";
 @import "fonts";
 
-.name {
+.ptd {
 	color: $ptd;
 }
 
-.mana {
+.mwt {
 	color: $mwt;
 }
 
-.type {
-  color: $ptd;
+.cards {
+  position: absolute;
+  left: 30px;
+  top: 100px;
 }
 
-.set {
-  color: $mwt;
+.deck {
+  position: absolute;
+  right: 30px;
+  top: 100px;
 }
 
-.selected {
-  color: green;
+.filters {
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
 }

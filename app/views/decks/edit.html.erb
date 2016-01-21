@@ -1,109 +1,128 @@
 <%= render partial: "layouts/navbar" %>
-<div class="container">
-  <div class="col s6">
-    <table cellspacing="0" cellpadding="0" border="0" width="350">
-     <tr>
-      <td>
+<div class="cards col s6">
+  <table cellspacing="0" cellpadding="0" border="0" width="350">
+   <tr>
+    <td>
+     <table cellspacing="0" cellpadding="1" border="1" width="350">
+       <tr style="color:white;background-color:grey">
+        <th class="name">
+          Name
+        </th>
+        <th class="mana">
+          Cost
+        </th>
+        <th class="type">
+          Type
+        </th>
+        <th class="set">
+          Set
+        </th>
+       </tr>
+     </table>
+    </td>
+   </tr>
+  <tr>
+  <td>
+     <div style="width:370px; height:300px; overflow:auto;">
        <table cellspacing="0" cellpadding="1" border="1" width="350">
-         <tr style="color:white;background-color:grey">
-          <th class="name">
-            Name
-          </th>
-          <th class="mana">
-            Cost
-          </th>
-          <th class="type">
-            Type
-          </th>
-          <th class="set">
-            Set
-          </th>
-         </tr>
-       </table>
-      </td>
-     </tr>
-    <tr>
-    <td>
-       <div style="width:370px; height:300px; overflow:auto;">
-         <table cellspacing="0" cellpadding="1" border="1" width="350">
-           <% @cards.first(50).each do |card| %>
-            <tr class="card" id="<%= card.id %>">
-              <td class="name">
-                <%= card.name %>
-              </td>
-              <td class="mana">
-                <%= card.mana_cost %>
-              </td>
-              <td class="type">
-                <%= card.card_type %>
-              </td>
-              <td class="set">
-                <%= card.set %>
-              </td>
-            </tr>
-          <% end %>
-         </table>  
-       </div>
-      </td>
-     </tr>
-    </table>
-    
-    <%= form_tag deck_path(@deck.id), method: :patch, class: "card-id" %>
-    <%= hidden_field_tag "card-id" %>
-    <%= submit_tag "Add to Deck" %>
-  </div>
+         <% @cards.first(50).each do |card| %>
+          <tr class="card" id="<%= card.id %>">
+            <td class="name ptd">
+              <%= card.name %>
+            </td>
+            <td class="mana mwt">
+              <%= card.mana_cost %>
+            </td>
+            <td class="type ptd">
+              <%= card.card_type %>
+            </td>
+            <td class="set mwt">
+              <%= card.set %>
+            </td>
+          </tr>
+        <% end %>
+       </table>  
+     </div>
+    </td>
+   </tr>
+  </table>
+  
+  <%= form_tag deck_path(@deck.id), method: :patch, class: "card-id" %>
+  <%= hidden_field_tag "card-id" %>
+  <%= submit_tag "Add to Deck" %>
+</div>
 
-  <div class="col s6 offset-s6">
-    <table cellspacing="0" cellpadding="0" border="0" width="350">
-     <tr>
-      <td>
-       <table cellspacing="0" cellpadding="1" border="1" width="350" >
-         <tr style="color:white;background-color:grey">
-          <th class="name">
-            Name
-          </th>
-          <th class="mana">
-            Cost
-          </th>
-          <th class="type">
-            Type
-          </th>
-          <th class="set">
-            Set
-          </th>
-         </tr>
-       </table>
-      </td>
-     </tr>
-    <tr>
+<div class="deck col s6 offset-s6">
+  <table cellspacing="0" cellpadding="0" border="0" width="350">
+   <tr>
     <td>
-       <div style="width:370px; height:300px; overflow:auto;">
-         <table cellspacing="0" cellpadding="1" border="1" width="350" >
-           <% @deck_cards.each do |card, quantity| %>
-            <tr class="card" id="<%= card.id %>">
-              <td class="name">
-                <% if quantity > 1%>
-                  <%= "#{card.name}(#{quantity})"%> 
-                <% else %>
-                  <%= card.name %>
-                <% end %>
-              </td>
-              <td class="mana">
-                <%= card.mana_cost %>
-              </td>
-              <td class="type">
-                <%= card.card_type %>
-              </td>
-              <td class="set">
-                <%= card.set %>
-              </td>
-            </tr>
-          <% end %>
-         </table>  
-       </div>
-      </td>
-     </tr>
-    </table>
+     <table cellspacing="0" cellpadding="1" border="1" width="350" >
+       <tr style="color:white;background-color:grey">
+        <th class="name">
+          Name
+        </th>
+        <th class="mana">
+          Cost
+        </th>
+        <th class="type">
+          Type
+        </th>
+        <th class="set">
+          Set
+        </th>
+       </tr>
+     </table>
+    </td>
+   </tr>
+  <tr>
+  <td>
+     <div style="width:370px; height:300px; overflow:auto;">
+       <table cellspacing="0" cellpadding="1" border="1" width="350" >
+         <% @deck_cards.each do |card, quantity| %>
+          <tr class="card" id="<%= card.id %>">
+            <td class="ptd">
+              <% if quantity > 1 %>
+                <%= "#{card.name}(#{quantity})"%>
+              <% else %>
+                <%= card.name %>
+              <% end %>
+            </td>
+            <td class="mwt">
+              <%= card.mana_cost %>
+            </td>
+            <td class="ptd">
+              <%= card.card_type %>
+            </td>
+            <td class="mwt">
+              <%= card.set %>
+            </td>
+          </tr>
+        <% end %>
+       </table>  
+     </div>
+    </td>
+   </tr>
+  </table>
+</div>
+
+<div class="filters">
+  <h4> Filters: </h4>
+  <div class="color-filters">
+      <a class="btn-floating btn-large waves-effect waves-light" id="wButton">
+        <p>W</p>
+      </a>
+      <a class="btn-floating btn-large waves-effect waves-light" id="gButton">
+        <p>G</p>
+      </a>
+      <a class="btn-floating btn-large waves-effect waves-light" id="rButton">
+        <p>R</p>
+      </a>
+      <a class="btn-floating btn-large waves-effect waves-light" id="bButton">
+        <p>B</p>
+      </a>
+      <a class="btn-floating btn-large waves-effect waves-light" id="uButton">
+        <p>U</p>
+      </a>
   </div>
 </div>
 
