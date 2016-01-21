@@ -1,5 +1,20 @@
 class DecksController < ApplicationController
 
+  def index
+    @decks = Deck.all
+  end
+
+  def show
+    deck = Deck.find(params[:id])
+    if deck.user == current_user
+      redirect_to edit_deck_path(deck.id)
+    else
+      new_deck = Deck.create(name: deck.name)
+      deck.cards.each { |card| new_deck.cards << card }
+      redirect_to edit_deck_path(new_deck.id)
+    end
+  end
+
 	def new
     @deck = Deck.new
 	end

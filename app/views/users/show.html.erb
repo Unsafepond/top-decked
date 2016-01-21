@@ -22,7 +22,7 @@
       </thead>
       <tbody>
         <% @user.decks.each do |deck| %>
-          <tr data-link="<%= edit_deck_path(deck.id) %>">
+          <tr data-link="<%= deck_path(deck.id) %>">
             <td>
               <%= deck.name %>
             </td>
@@ -32,6 +32,11 @@
             <td>
               <%= deck.cards.count %>
             </td>
+            <% if current_user.decks.find(deck.id) %>
+              <td>
+                <%= button_to "Edit", edit_deck_path(deck.id), method: :get %>
+              </td>
+            <% end %>
             <td>
               <%= button_to "Delete", deck_path(deck.id), method: :delete %>
             </td>
