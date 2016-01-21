@@ -10,7 +10,6 @@ class DecksController < ApplicationController
   end
 
   def edit
-    @user = current_user
     @cards = Card.all
     @deck = current_user.decks.find(params[:id])
     @deck_cards = DeckHasher.new(@deck.cards).cards

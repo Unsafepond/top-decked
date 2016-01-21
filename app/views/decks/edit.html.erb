@@ -83,9 +83,9 @@
             <tr class="card" id="<%= card.id %>">
               <td class="name">
                 <% if quantity > 1%>
-                  <%= card.name %>
-                <% else %>
                   <%= "#{card.name}(#{quantity})"%> 
+                <% else %>
+                  <%= card.name %>
                 <% end %>
               </td>
               <td class="mana">
